@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  @font-face{
+    font-family: main;
+    src: url(Fonts/Skranji-Regular.ttf);
   }
+  @font-face{
+    font-family: secondary;
+    src: url(Fonts/Mooli-Regular.ttf);
+  }
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background: #152646;
+}
+input{
+  background: #000;
+  color: white;
+  padding: 10px;
+  width: 30vw;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  margin-right: 2vw;
+}
+.in{
+  /* background: white; */
+  display: flex;
+  justify-content: center;
+  height: 16vh;
+  align-items: center;
+}
+.searchbtn,.svg-button{
+  width: fit-content;
+  /* min-width: 100px; */
+  /* height: 25px; */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2.5px solid black;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+.searchbtn:hover,
+.svg-button:hover {
+  background-color: #151414;
+  box-shadow: 0px 0px 20px -18px;
+  border-color: #252525;
+}
+.logo{
+  overflow: hidden;
+  height: 20vh;
+}
+header{
+  background: #96acaa;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+button:active {
+  transform: scale(0.95);
+}
+section{
+  height:100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #96acaa;
+} 
+
+.result{
+  width: 70%;
+  /* height: vh; */
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7px );
+-webkit-backdrop-filter: blur( 7px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.result2{
+  width: 70%;
+  height:48vh;
+  margin:  1rem 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  /* padding: 1rem; */
+}
+.result2 h1{
+  font-size: 50px;
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2rem;
+  /* font-family: main; */
+  font-family: fantasy;
+  color: #2552a6;
+  letter-spacing: 1px;
+  /* font-weight: 600; */
+}
+.result2 h1 span{
+  font-size: 2.5vw;
+  color: #000000;
+  font-family: secondary;
+  text-align: center !important;
+}
+.result h1{
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.modelHeading{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+}
+p{
+  color: rgb(0, 0, 0);
+  margin-top: 1rem;
+}
+footer p{
+  color: white !important;
+}
+.svg-button {
+ /* font-size: 2rem; */
+ font-weight: 500;
+ /* color: red; */
+ margin-top: 2rem;
+}
+footer{
+  background: #152646;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 10vh;
+  /* margin-top: 22px; */
 }
-
-.App-link {
-  color: #61dafb;
+footer a{
+  color: #d6ac5d;
+  font-weight: bolder;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer a:hover{
+  text-decoration-line: underline;
+}
+#modeImage{
+  height: 8vw;
+}
+@media only screen and (max-width: 762px) {
+  .searchbtn{
+    padding: 4px;
   }
-  to {
-    transform: rotate(360deg);
+  input{
+    width: 50vw;
+    
+  }
+  #modeImage{
+    height: 18vw;
+  }
+  .result2 h1{
+    font-size: 30px;
+    margin-left: .5rem;
+  }
+
+}
+@media only screen and (max-width: 425px) {
+  .result2 h1 span{
+    font-size: 3.5vw;
+    color: #090909;
+    line-height: -1px;
+    font-family: secondary;
+    text-align: center !important;
   }
 }
